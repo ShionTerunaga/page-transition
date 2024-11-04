@@ -2,6 +2,10 @@ import * as React from "react"
 import { Link, Outlet, createRootRoute } from "@tanstack/react-router"
 import { TanStackRouterDevtools } from "@tanstack/router-devtools"
 import { usePathname } from "../hooks/pathname"
+import { motion } from "framer-motion"
+import AnimationLayout from "../layout/animation.layout"
+import { HomeComponent } from "../feature/home"
+import { AnimationProvider } from "../store/animation.provider"
 
 export const Route = createRootRoute({
     component: RootComponent
@@ -33,7 +37,10 @@ function RootComponent() {
                 </Link>
             </div>
             <hr />
-            <Outlet />
+            <AnimationProvider homeComponent={<HomeComponent />}>
+                <Outlet />
+            </AnimationProvider>
+
             <TanStackRouterDevtools position="bottom-right" />
         </>
     )

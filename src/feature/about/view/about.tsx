@@ -1,6 +1,12 @@
 export function AboutComponent() {
     return (
-        <div className="p-2">
+        <div
+            style={{
+                marginLeft: 30,
+                border: "1px solid blue",
+                backgroundColor: "blue"
+            }}
+        >
             <h3>About</h3>
         </div>
     )

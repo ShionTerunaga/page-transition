@@ -5,7 +5,6 @@ export const usePathname = () => {
 
     useEffect(() => {
         const handleChangePathName = () => {
-            console.log(window.location.pathname)
             setPathname(window.location.pathname)
         }
 

@@ -1,6 +1,11 @@
 export const HomeComponent = () => {
     return (
-        <div className="p-2">
+        <div
+            style={{
+                marginLeft: 50,
+                border: "1px solid red"
+            }}
+        >
             <h3>Welcome Home!</h3>
         </div>
     )
